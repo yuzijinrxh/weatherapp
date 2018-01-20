@@ -145,15 +145,15 @@ $(function(){
 	
 	// 事件委派
 	 $("body").delegate(".city_list li", "click", function() {
-		// let son = this.innerHTML;
-		// getFullWeather(son);
-		// $(".citys").css("display","none");
+		let son = this.innerHTML;
+		getFullWeather(son);
+		$(".citys").css("display","none");
 	 })
 
 	 $("body").delegate(".citys_title", "click", function() {
-		// let son = this.innerHTML;
-		// getFullWeather(son);
-		// $(".citys").css("display","none");
+		let son = this.innerHTML;
+		getFullWeather(son);
+		$(".citys").css("display","none");
 	 })
 
 	
