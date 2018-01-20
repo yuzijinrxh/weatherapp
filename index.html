@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>天气APP</title>
+	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/delete.css">
+	<script src="js/jquery3.2.1.min.js"></script>
+	<script src="js/rem.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/index.js" ></script>
+
+</head>
+<body>
+	<!-- 当下的天气情况	 -->
+	<header>
+		<h1 class="now_city_box">
+			<span class="dingwei">&#xe61e;</span>
+			<span class="now_city"></span>
+		</h1>
+		<div class="now_air_box">
+			<span class="now_air_title">空气</span>
+			<span class="now_air_quality"></span>
+		</div>
+		<h2 class="now_temp">
+			<span class="now_temp_temp"></span><span>°</span>
+		</h2>
+		<h3 class="now_weather"></h3>
+		<h4 class="now_wind_box">
+			<span class="now_wind"></span>
+			<span class="now_wind_level"></span>
+		</h4>
+		<h5 class="remind">天冷了，注意保暖~</h5>
+	</header>
+	<!-- 近期两天的天气情况 -->
+	<section class="next">
+		<div class="next_box next_box1">
+			<div class="next_top">
+				<span class="next_data">今天</span>
+				<p class="next_temp">
+					<span class="today_temp_max"></span>/<span class="today_temp_min"></span>℃
+				</p>
+			</div>
+			
+			<div class="next_bottom">
+				<span class="today_weather"></span>
+				<img src="img/1.png" alt="" class="today_img">
+			</div>
+		</div> 	
+		<div class="next_box next_box2">
+			<div class="next_top">
+				<span class="next_data">明天</span>
+				<p class="next_temp">
+					<span class="tomorrow_temp_max"></span>/<span class="tomorrow_temp_min"></span>℃
+				</p>
+			</div>
+			
+			<div class="next_bottom">
+				<span class="tomorrow_weather"></span>
+				<img src="img/0.png" alt="" class="tomorrow_img">
+			</div>
+		</div>	
+	</section>
+	<!-- 未来24小时的天气情况 -->
+	<section class="hours">
+		<ul class="hours_content">
+		<!--	<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			<li>
+			<span class="hours_time"></span>
+			<img src="" alt="" class="hours_img">
+			<span class="hours_temp"></span>
+			</li>
+			-->
+		</ul>
+		
+	</section>
+	<!-- 未来一周的天气情况 -->
+	<section class="dates">
+		<ul class="dates_content">
+			<!--<li>
+			<span class="dates_day">1/15</span>
+			<span class="dates_weather">多云</span>
+			<img src="img/2.png" alt="" class="dates_img">
+			<span class="dates_temp_max">3°</span>
+			<span class="dates_temp_min">-12°</span>
+			<span class="now_wind">西北风</span>
+			<span class="now_wind_level">3级</span>
+			</li>	
+			<li>
+			<span class="dates_day">1/16</span>
+			<span class="dates_weather">多云</span>
+			<img src="img/2.png" alt="" class="dates_img">
+			<span class="dates_temp_max">3°</span>
+			<span class="dates_temp_min">-12°</span>
+			<span class="now_wind">西风</span>
+			<span class="now_wind_level">3级</span>
+			</li>	
+			<li>
+			<span class="dates_day">1/17</span>
+			<span class="dates_weather">多云</span>
+			<img src="img/2.png" alt="" class="dates_img">
+			<span class="dates_temp_max">3°</span>
+			<span class="dates_temp_min">-12°</span>
+			<span class="now_wind">西北风</span>
+			<span class="now_wind_level">3级</span>
+			</li>	
+			<li>
+			<span class="dates_day">1/18</span>
+			<span class="dates_weather">多云</span>
+			<img src="img/2.png" alt="" class="dates_img">
+			<span class="dates_temp_max">3°</span>
+			<span class="dates_temp_min">-12°</span>
+			<span class="now_wind">西北风</span>
+			<span class="now_wind_level">3级</span>
+			</li>	
+			<li>
+			<span class="dates_day">1/19</span>
+			<span class="dates_weather">多云</span>
+			<img src="img/2.png" alt="" class="dates_img">
+			<span class="dates_temp_max">3°</span>
+			<span class="dates_temp_min">-12°</span>
+			<span class="now_wind">西北风</span>
+			<span class="now_wind_level">3级</span>
+			</li>	
+			<li>
+			<span class="dates_day">1/20</span>
+			<span class="dates_weather">多云</span>
+			<img src="img/2.png" alt="" class="dates_img">
+			<span class="dates_temp_max">3°</span>
+			<span class="dates_temp_min">-12°</span>
+			<span class="now_wind">西北风</span>
+			<span class="now_wind_level">3级</span>
+			</li>	
+			<li>
+			<span class="dates_day">1/21</span>
+			<span class="dates_weather">多云</span>
+			<img src="img/2.png" alt="" class="dates_img">
+			<span class="dates_temp_max">3°</span>
+			<span class="dates_temp_min">-12°</span>
+			<span class="now_wind">西北风</span>
+			<span class="now_wind_level">3级</span>
+			</li>
+			-->	
+		</ul>
+	</section>
+	 
+</body>	
+</html>
+<!-- 城市地区模块 -->
+<section class="citys">
+	<div class="search_box">
+		<input type="text" class="search" placeholder="请输入搜索内容">
+		<span class="confirm">取消</span>
+	</div>
+	<div class="citys_box">
+		<section>
+			<h1 class="citys_title1">热门城市</h1>
+			<ul class="city_list">
+				<li>太原</li>	
+				<li>北京</li>
+				<li>上海</li>
+				<li>杭州</li>
+				<li>义乌</li>
+				<li>四川</li>
+			</ul>
+		</section>
+		
+	</div>
+		
+
+</section>
+</body>
